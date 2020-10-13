@@ -706,7 +706,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="471" height="315"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -800,9 +800,9 @@
                                                             <rect key="frame" x="120" y="1" width="307" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="oKZ-fN-Yw6">
+                                                                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="oKZ-fN-Yw6" customClass="HorizontalScrollView">
                                                                     <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
-                                                                    <clipView key="contentView" id="Jei-fq-xBS">
+                                                                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Jei-fq-xBS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
@@ -828,6 +828,7 @@
                                                                                 </constraints>
                                                                             </view>
                                                                         </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </clipView>
                                                                     <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Twh-Y6-yC2">
                                                                         <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
