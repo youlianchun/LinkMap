@@ -122,7 +122,7 @@
     if (keywork.length > 0) {
         BOOL isAa = self.isAaState.state == NSControlStateValueOn;
         self.displayNodes = [OutlineNode<LinkSymbol *> filterNodes:self.nodes condition:^BOOL(LinkSymbol * _Nonnull content) {
-            return containsRenge(content.name, keywork, isAa).length > 0;
+            return [content.name rangeOfString:keywork options:isAa ? NSLiteralSearch : NSCaseInsensitiveSearch].length > 0;
         }];
     }else {
         self.displayNodes = self.nodes;
@@ -141,21 +141,13 @@
 
 - (NSAttributedString *)keyworkString:(NSString *)string keywork:(NSString *)keywork isAa:(BOOL)isAa {
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:string];
-    NSRange range = containsRenge(string, keywork, isAa);
+    NSRange range = [string rangeOfString:keywork options:isAa ? NSLiteralSearch : NSCaseInsensitiveSearch];
     if (range.length > 0) {
         [str addAttribute:NSForegroundColorAttributeName value:[NSColor redColor] range:range];
     }
     return [str copy];
 }
 
-static NSRange containsRenge(NSString *string, NSString *contains, BOOL isAa) {
-    if (!isAa) {
-        return [string.uppercaseString rangeOfString:contains.uppercaseString];
-    }
-    else {
-        return [string rangeOfString:contains];
-    }
-}
 
 #pragma mark - NSOutlineViewDataSource
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
