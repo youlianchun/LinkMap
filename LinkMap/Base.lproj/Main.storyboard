@@ -800,7 +800,7 @@
                                                             <rect key="frame" x="120" y="1" width="307" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="oKZ-fN-Yw6" customClass="HorizontalScrollView">
+                                                                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="oKZ-fN-Yw6" customClass="HorizontalScrollView">
                                                                     <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
                                                                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Jei-fq-xBS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
