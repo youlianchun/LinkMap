@@ -10,6 +10,7 @@
 #import "OutlineNode.h"
 #import "MsgMerger.h"
 
+
 @interface ViewController()<NSOutlineViewDataSource, NSOutlineViewDelegate, NSTextFieldDelegate>
 
 @property (weak) IBOutlet NSOutlineView *outlineView;
@@ -35,13 +36,14 @@
     self.msgMerger = [MsgMerger msgMergerWithTarget:self sel:@selector(reloadSearchData)];
 }
 
-- (IBAction)isAaStateAction:(id)sender {
+- (IBAction)isAaStateAction:(NSButton *)sender {
     [self reloadSearchData];
 }
 
-- (IBAction)openFileAction:(id)sender {
+- (IBAction)openFileAction:(NSButton *)sender {
     [self openFilePanel:YES callback:^(NSString *path) {
         self.indicator.hidden = NO;
+        sender.enabled = NO;
         [self.indicator startAnimation:self];
         [self analyzeLinkMapFile:path callback:^(NSArray<OutlineNode<LinkSymbol *> *> *nodes) {
             self.indicator.hidden = YES;
@@ -52,6 +54,7 @@
             if (nodes.count == 0) {
                 [self showAlertWithTitle:@"请检查输入文件" messate:path];
             }
+            sender.enabled = YES;
         }];
     }];
 }
