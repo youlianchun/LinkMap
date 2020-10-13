@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) ContentType content;
 @property (nonatomic, copy) NSArray<OutlineNode *> *childNodes;
 
++ (NSArray<OutlineNode<ContentType> *> *)filterNodes:(NSArray<OutlineNode<ContentType> *> *)nodes condition:(BOOL(^)(ContentType content))condition;
 @end
 
 NS_ASSUME_NONNULL_END
