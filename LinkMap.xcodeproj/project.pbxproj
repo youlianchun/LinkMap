@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A980D11F2535ED2F0016670E /* HorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A980D11E2535ED2F0016670E /* HorizontalScrollView.m */; };
 		A9A6C0CA2534723300DC9440 /* MsgMerger.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A6C0C92534723300DC9440 /* MsgMerger.m */; };
 		A9BE368225329D71001D7961 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BE368125329D71001D7961 /* AppDelegate.m */; };
 		A9BE368525329D71001D7961 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BE368425329D71001D7961 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A980D11D2535ED2F0016670E /* HorizontalScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollView.h; sourceTree = "<group>"; };
+		A980D11E2535ED2F0016670E /* HorizontalScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalScrollView.m; sourceTree = "<group>"; };
 		A9A6C0C82534723300DC9440 /* MsgMerger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MsgMerger.h; sourceTree = "<group>"; };
 		A9A6C0C92534723300DC9440 /* MsgMerger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgMerger.m; sourceTree = "<group>"; };
 		A9BE367D25329D71001D7961 /* LinkMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +75,8 @@
 				A9A6C0C92534723300DC9440 /* MsgMerger.m */,
 				A9BE36B625329D9D001D7961 /* LinkSymbol.h */,
 				A9BE36B525329D9C001D7961 /* LinkSymbol.m */,
+				A980D11D2535ED2F0016670E /* HorizontalScrollView.h */,
+				A980D11E2535ED2F0016670E /* HorizontalScrollView.m */,
 				A9BE368025329D71001D7961 /* AppDelegate.h */,
 				A9BE368125329D71001D7961 /* AppDelegate.m */,
 				A9BE368325329D71001D7961 /* ViewController.h */,
@@ -159,6 +164,7 @@
 				A9A6C0CA2534723300DC9440 /* MsgMerger.m in Sources */,
 				A9BE368225329D71001D7961 /* AppDelegate.m in Sources */,
 				A9BE36B825329D9D001D7961 /* LinkSymbol.m in Sources */,
+				A980D11F2535ED2F0016670E /* HorizontalScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
