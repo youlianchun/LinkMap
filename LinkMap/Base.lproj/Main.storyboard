@@ -741,14 +741,14 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="nea-rU-y9T" viewBased="YES" indentationPerLevel="16" outlineTableColumn="3IB-lQ-cFf" id="PrG-AR-XlA">
-                                            <rect key="frame" x="0.0" y="0.0" width="429" height="216"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="447" height="216"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="116" minWidth="40" maxWidth="1000" id="3IB-lQ-cFf">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                <tableColumn width="128" minWidth="40" maxWidth="1000" id="3IB-lQ-cFf">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Size">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -760,11 +760,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="cellView0" misplaced="YES" id="i4G-ph-eBn">
-                                                            <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                                            <rect key="frame" x="1" y="1" width="128" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eyU-a6-bZB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="16"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="yQU-qe-Pmw">
                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -784,8 +784,8 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="307" minWidth="40" maxWidth="1000" id="XuO-ZI-J0s">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                <tableColumn width="313" minWidth="40" maxWidth="1000" id="XuO-ZI-J0s">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Symbol">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -797,17 +797,17 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="cellView1" misplaced="YES" id="yN2-Tj-JsX">
-                                                            <rect key="frame" x="120" y="1" width="307" height="17"/>
+                                                            <rect key="frame" x="132" y="1" width="313" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="oKZ-fN-Yw6" customClass="HorizontalScrollView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="313" height="16"/>
                                                                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Jei-fq-xBS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="16"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <view id="2iK-1f-ECG">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="292" height="16"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="298" height="16"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <subviews>
                                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wFc-TG-tGo">
@@ -831,7 +831,7 @@
                                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </clipView>
                                                                     <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Twh-Y6-yC2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="307" height="16"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="16"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                     </scroller>
                                                                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="mqR-Nw-8uO">
@@ -861,8 +861,8 @@
                                     <constraint firstAttribute="width" constant="431" id="P7R-XX-vXl"/>
                                     <constraint firstAttribute="width" secondItem="nx1-fE-pND" secondAttribute="height" multiplier="16:9" id="dTN-Cs-s2j"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="TUB-T4-RUB">
-                                    <rect key="frame" x="1" y="180" width="429" height="16"/>
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="TUB-T4-RUB">
+                                    <rect key="frame" x="1" y="225" width="429" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="aea-Vo-shT">
@@ -870,7 +870,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="nea-rU-y9T">
-                                    <rect key="frame" x="0.0" y="0.0" width="429" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="447" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>

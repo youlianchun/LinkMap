@@ -45,7 +45,7 @@
         self.indicator.hidden = NO;
         sender.enabled = NO;
         [self.indicator startAnimation:self];
-        [self analyzeLinkMapFile:path callback:^(NSArray<OutlineNode<LinkSymbol *> *> *nodes) {
+        [self analyzeLinkMapFile:path callback:^(NSArray<OutlineNode<LinkSymbol *> *> *nodes, NSString *arch) {
             self.indicator.hidden = YES;
             [self.indicator stopAnimation:self];
             self.textField.stringValue = path;
@@ -54,6 +54,7 @@
             if (nodes.count == 0) {
                 [self showAlertWithTitle:@"请检查输入文件" messate:path];
             }
+            self.outlineView.tableColumns.firstObject.title = [NSString stringWithFormat:@"Size (%@)", arch];
             sender.enabled = YES;
         }];
     }];
@@ -74,12 +75,13 @@
     }];
 }
 
-- (void)analyzeLinkMapFile:(NSString *)file callback:(void(^)(NSArray<OutlineNode<LinkSymbol *> *> *nodes))callback {
+- (void)analyzeLinkMapFile:(NSString *)file callback:(void(^)(NSArray<OutlineNode<LinkSymbol *> *> *nodes, NSString *arch))callback {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSArray<LinkSymbol *> *symbols = [LinkSymbol symbolsOfLinkMapFile:file combination:YES keyword:nil];
         NSArray *nodes = [self nodesFromSymbols:symbols];
+        NSString *symbolArch =[LinkSymbol symbolArchOfLinkMapFile:file];
         dispatch_async(dispatch_get_main_queue(), ^{
-            callback([nodes copy]);
+            callback([nodes copy], symbolArch);
         });
     });
 }
@@ -192,6 +194,7 @@
 
     return cellView;
 }
+
 
 //- (CGFloat)outlineView:(NSOutlineView *)outlineView heightOfRowByItem:(id)item {
 //    return 30.0f;

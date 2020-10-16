@@ -18,4 +18,5 @@
 
 @interface LinkSymbol(LinkMap)
 + (NSArray<LinkSymbol *> *)symbolsOfLinkMapFile:(NSString *)file combination:(BOOL)combination keyword:(NSString *)keyword;
++ (NSString *)symbolArchOfLinkMapFile:(NSString *)file;
 @end

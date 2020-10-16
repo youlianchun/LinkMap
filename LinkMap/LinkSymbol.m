@@ -36,6 +36,21 @@
     return symbolsFromContent(content, combination, keyword);
 }
 
++ (NSString *)symbolArchOfLinkMapFile:(NSString *)file {
+    if (!isFilePath(file)) {
+        return nil;
+    }
+    NSString *content = [NSString stringWithContentsOfFile:file encoding:NSMacOSRomanStringEncoding error:nil];
+    return symbolArchFromContent(content);
+}
+
+static NSString *symbolArchFromContent(NSString *content) {
+    NSString *symbolArch = nil;
+    if (checkContent(content)) {
+        symbolArch = matche(@"(?<=# Arch: ).*", content).firstObject;
+    }
+    return symbolArch;
+}
 static BOOL isFilePath(NSString *path) {
     BOOL isDirectory = NO;
     BOOL isExists = [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory];
@@ -126,7 +141,6 @@ NSDictionary *symbolMapFromContent(NSString *content) {
     return [symbolMap copy];
 }
 
-
 static NSDictionary<NSString *, NSArray<LinkSymbol *> *> *groupingSymbols(NSArray<LinkSymbol *> *symbols) {
     if (symbols.count == 0) {
         return nil;
@@ -163,7 +177,20 @@ static NSArray<LinkSymbol *> *combinationSymbols(NSArray<LinkSymbol *> *symbols)
     NSMutableArray *combinationSymbols = [NSMutableArray array];
     for (NSString *combination in groupingMap.allKeys) {
         NSArray<LinkSymbol *> *symbols = groupingMap[combination];
-        if (symbols.count > 1) {
+        if (symbols.count == 1) {
+            if ([symbols.firstObject.name isEqualToString:combination]) {
+                [combinationSymbols addObject:symbols.firstObject];
+            }
+            else {
+                LinkSymbol *symbol = [[LinkSymbol alloc] init];
+                symbol->_file = combination;
+                symbol->_size = symbols.firstObject.size;
+                symbol->_name = symbols.firstObject.name;
+                symbol->_childs = symbols;
+                [combinationSymbols addObject:symbol];
+            }
+        }
+        else if (symbols.count > 1) {
             symbols = sortSymbols(symbols);
             NSUInteger size = 0;
             for (LinkSymbol *symbol in symbols) {
